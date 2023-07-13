@@ -15,6 +15,7 @@ import styles from 'viamagnus/src/styles/containers/Profile';
 import UpWithSuccessIcon from 'viamagnus/src/assets/svg/UpWithSuccessIcon';
 import DownWithDangerIcon from 'viamagnus/src/assets/svg/DownWithDangerIcon';
 import {Spacing} from 'viamagnus/src/styles/metrics';
+import UserTabs from 'viamagnus/src/components/UserTabs';
 
 export default function Profile() {
   return (
@@ -65,6 +66,8 @@ export default function Profile() {
       </View>
 
       <View style={styles.divider} />
+
+      <UserTabs />
     </Screen>
   );
 }

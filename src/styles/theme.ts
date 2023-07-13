@@ -8,6 +8,7 @@ const theme = {
     stroke: '#EEEAF3',
     secondaryBg: '#F3F2F7',
     white: '#ffffff',
+    headColor: '#6231AD',
   },
   fonts: {
     families: {
