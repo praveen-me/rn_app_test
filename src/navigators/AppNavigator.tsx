@@ -3,10 +3,6 @@ import {StyleSheet, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {RouteProp} from '@react-navigation/native';
 
-// styling
-// import theme from 'audvice/src/styles/theme';
-// libs
-
 import Home from '../containers/Home';
 import League from '../containers/League';
 import Research from '../containers/Research';
@@ -32,7 +28,7 @@ type AppTabParams = {
   Profile: undefined;
 };
 
-export type AudviceTabScreenProps<RouteName extends keyof AppTabParams> =
+export type AppTabScreenProps<RouteName extends keyof AppTabParams> =
   NavigatorRouteProps<AppTabParams, RouteName>;
 
 const AppNavigator = createBottomTabNavigator<AppTabParams>();
@@ -103,7 +99,7 @@ export default function AppTabs() {
               return {
                 tabBarIcon: RenderIcon(route),
                 header: () => {},
-                tabBarLabel: () => null,
+                // tabBarLabel: () => null,
               };
             }}
           />

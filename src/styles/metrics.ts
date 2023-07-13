@@ -19,8 +19,8 @@ const hp = (heightPercent: string): number => {
 };
 
 const Typo = {
-  small: moderateScaleWithRatio(10),
-  medium: moderateScaleWithRatio(15),
+  small: moderateScaleWithRatio(12),
+  medium: moderateScaleWithRatio(14),
   big: moderateScaleWithRatio(20),
   veryBig: moderateScaleWithRatio(30),
 };

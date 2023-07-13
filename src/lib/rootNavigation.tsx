@@ -12,22 +12,6 @@ import {
 } from '@react-navigation/stack';
 import AppTabs from '../navigators/AppNavigator';
 
-// import {
-//   isNavigationReadyRef,
-//   navigationRef,
-// } from 'audvice/src/services/navigationService';
-// import AppNavigator from 'audvice/src/navigators/AppNavigator';
-
-// import {useDispatch, useSelector} from 'react-redux';
-// import {getShowTnCScreen} from 'audvice/src/redux/selectors/misc.selectors';
-// import {Linking, Platform} from 'react-native';
-// import {
-//   navigationReady,
-//   toggleGlobalLoading,
-// } from 'audvice/src/redux/actions/misc.actions';
-// import storage from 'audvice/src/lib/storage';
-// import Deeplinks from 'audvice/src/services/deeplinks';
-
 type NavigatorBaseType<
   List extends ParamListBase,
   Route extends keyof List,

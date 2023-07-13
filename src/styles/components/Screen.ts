@@ -1,11 +1,13 @@
-import {Platform, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Spacing} from '../metrics';
+import theme from 'viamagnus/src/styles/theme';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // marginHorizontal: Spacing.big,
-    paddingTop: Platform.OS === 'android' ? Spacing.verySmall : 0,
+
+    paddingTop: Spacing.verySmall,
+    backgroundColor: theme.colors.primary,
   },
 });
 
