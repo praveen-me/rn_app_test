@@ -8,6 +8,7 @@ import commonStyles from 'viamagnus/src/styles/common';
 import CoinInflation from 'viamagnus/src/containers/Home/CoinInflation';
 import Prediction from 'viamagnus/src/components/Prediction';
 import HomeOverView from 'viamagnus/src/components/HomeOverView';
+import PredictionModal from 'viamagnus/src/components/PredictionModal';
 
 export default function Home() {
   let options = [
@@ -46,6 +47,7 @@ export default function Home() {
           />
         </View>
       </View>
+      <PredictionModal />
     </Screen>
   );
 }
