@@ -1,8 +1,4 @@
-/**
- * @flow
- * @format
- */
-import {Typo} from 'audvice/src/styles/metrics';
+import {Typo} from 'viamagnus/src/styles/metrics';
 
 const theme = {
   colors: {

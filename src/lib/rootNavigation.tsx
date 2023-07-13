@@ -1,22 +1,22 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
   NavigationContainer,
   ParamListBase,
   RouteProp,
 } from '@react-navigation/native';
-import {Text} from 'react-native';
 
 // import Config from 'react-native-config';
 import {
   // createStackNavigator,
   StackNavigationProp,
 } from '@react-navigation/stack';
+import AppTabs from '../navigators/AppNavigator';
 
 // import {
 //   isNavigationReadyRef,
 //   navigationRef,
 // } from 'audvice/src/services/navigationService';
-import AppNavigator from 'audvice/src/navigators/AppNavigator';
+// import AppNavigator from 'audvice/src/navigators/AppNavigator';
 
 // import {useDispatch, useSelector} from 'react-redux';
 // import {getShowTnCScreen} from 'audvice/src/redux/selectors/misc.selectors';
@@ -47,14 +47,10 @@ export interface NavigatorRouteProps<
 }
 
 function RootNavigator() {
-  type TnCNavigatorParamList = {
-    TnC: undefined;
-  };
-
   return (
-    <>
-      <AppNavigator />
-    </>
+    <NavigationContainer>
+      <AppTabs />
+    </NavigationContainer>
   );
 }
 

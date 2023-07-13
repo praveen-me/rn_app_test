@@ -1,5 +1,5 @@
-import {moderateScaleWithRatio} from 'audvice/src/utils/moderateScaleWithRatio';
 import {Dimensions, PixelRatio} from 'react-native';
+import {moderateScaleWithRatio} from 'viamagnus/src/styles/moderateScaleWithRatio';
 
 export const screenWidth = Dimensions.get('window').width;
 export const screenHeight = Dimensions.get('window').height;

@@ -6,39 +6,14 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import RootNavigator from './src/lib/rootNavigation';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import {SafeAreaView} from 'react-native';
+import RootNavigator from 'viamagnus/src/lib/rootNavigation';
+import commonStyles from 'viamagnus/src/styles/common';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView>
+    <SafeAreaView style={commonStyles.flex1}>
       <RootNavigator />
     </SafeAreaView>
   );
