@@ -7,8 +7,31 @@ import commonStyles from 'viamagnus/src/styles/common';
 
 import CoinInflation from 'viamagnus/src/containers/Home/CoinInflation';
 import Prediction from 'viamagnus/src/components/Prediction';
+import HomeOverView from 'viamagnus/src/components/HomeOverView';
 
 export default function Home() {
+  let options = [
+    {
+      title: 'Prize Pool',
+      value: '$12000',
+    },
+    {
+      title: 'Under',
+      value: '3.25x',
+    },
+    {
+      title: 'Over',
+      value: '1.25x',
+    },
+    {
+      title: 'Entry Fees',
+      value: '5',
+    },
+  ];
+
+  const underPrediction = 232;
+  const overPrediction = 183;
+
   return (
     <Screen style={commonStyles.flex1}>
       <View style={styles.container}>
@@ -16,7 +39,11 @@ export default function Home() {
 
         <View style={styles.heroInfoContainer}>
           <CoinInflation />
-          <Prediction />
+          <Prediction options={options} />
+          <HomeOverView
+            underPrediction={underPrediction}
+            overPrediction={overPrediction}
+          />
         </View>
       </View>
     </Screen>

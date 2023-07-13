@@ -7,30 +7,20 @@ import Button from 'viamagnus/src/components/Button';
 import DownIcon from 'viamagnus/src/assets/svg/DownIcon';
 import UpIcon from 'viamagnus/src/assets/svg/UpIcon';
 
-let options = [
-  {
-    title: 'Prize Pool',
-    value: '$12000',
-  },
-  {
-    title: 'Under',
-    value: '3.25x',
-  },
-  {
-    title: 'Over',
-    value: '1.25x',
-  },
-  {
-    title: 'Entry Fees',
-    value: '5',
-  },
-];
+type Option = {
+  title: string;
+  value: string;
+};
 
-export default function Prediction() {
+interface IPredictionProps {
+  options: Option[];
+}
+
+export default function Prediction(props: IPredictionProps) {
   return (
     <View style={styles.predictionContainer}>
       <View style={[commonStyles.row, commonStyles.justifyBetween]}>
-        {options.map(option => (
+        {props.options.map(option => (
           <View key={option.title} style={commonStyles.alignCenter}>
             <Text.H4 styles={styles.optionTitle}>{option.title}</Text.H4>
             <Text.H3 styles={styles.optionValue}>{option.value}</Text.H3>
@@ -38,10 +28,15 @@ export default function Prediction() {
         ))}
       </View>
 
-      <View>
-        <Text.H3>What's your prediction?</Text.H3>
+      <View style={styles.bottomContainer}>
+        <Text.H3 styles={styles.whatUrPred}>What's your prediction?</Text.H3>
 
-        <View style={[commonStyles.row, commonStyles.justifyBetween]}>
+        <View
+          style={[
+            commonStyles.row,
+            commonStyles.justifyBetween,
+            styles.btnContainer,
+          ]}>
           <Button
             style={[
               commonStyles.row,
@@ -52,7 +47,7 @@ export default function Prediction() {
             ]}
             onPress={() => {}}>
             <DownIcon />
-            <Text.H3>Under</Text.H3>
+            <Text.H3 styles={styles.btnText}>Under</Text.H3>
           </Button>
           <Button
             style={[
@@ -65,7 +60,7 @@ export default function Prediction() {
             ]}
             onPress={() => {}}>
             <UpIcon />
-            <Text.H3>Over</Text.H3>
+            <Text.H3 styles={styles.btnText}>Over</Text.H3>
           </Button>
         </View>
       </View>

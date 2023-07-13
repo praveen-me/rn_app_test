@@ -29,6 +29,21 @@ const styles = StyleSheet.create({
   overBtn: {
     backgroundColor: theme.colors.headColor,
   },
+  bottomContainer: {
+    paddingTop: moderateScaleWithRatio(22),
+  },
+  btnContainer: {
+    paddingTop: Spacing.small,
+  },
+  whatUrPred: {
+    fontWeight: '500',
+    color: theme.colors.secondary,
+  },
+  btnText: {
+    fontWeight: '500',
+    color: theme.colors.white,
+    paddingLeft: moderateScaleWithRatio(5),
+  },
 });
 
 export default styles;
