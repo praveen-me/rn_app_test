@@ -9,6 +9,8 @@ const theme = {
     secondaryBg: '#F3F2F7',
     white: '#ffffff',
     headColor: '#6231AD',
+    infoColor: '#D2BAF5',
+    lightTextColor: '#B5C0C8',
   },
   fonts: {
     families: {

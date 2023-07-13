@@ -1,10 +1,11 @@
 import {FlatList, View} from 'react-native';
 import React, {useState} from 'react';
+
 import Text from 'viamagnus/src/components/Text';
 import Button from 'viamagnus/src/components/Button';
 import commonStyles from 'viamagnus/src/styles/common';
 import styles from 'viamagnus/src/styles/components/UserTabs';
-import CardImage from 'viamagnus/src/assets/svg/CardImage';
+
 import Badge from 'viamagnus/src/components/Badge';
 
 type Tab = {
